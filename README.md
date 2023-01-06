@@ -1,5 +1,5 @@
 # Python_excercise
-class WorkPeice(): def init(self, material, shape, radius=None, length=None, width=None, height=None):
+class WorkPeice(): def init(self, material, shape, radius=None, length=None, width=None, height=None, base=None, height_P=None):
 
     self.material = material
     self.shape = shape
@@ -36,10 +36,19 @@ def Total_cost(self):
   elif self.material == 'steel':
     cost= WorkPeice.print_material_volume_breakdown(self)*2200 #UnitCost_of_steel
     return  cost
-wooden_top = WorkPeice(material='wood',shape='Cylider', radius=1, height=0.1) metal_leg = WorkPeice(material='steel',shape='Cylider', radius=0.1, height=2) metal_cubic=WorkPeice(material='steel',shape='Cube', length=1, width=3,height=2) chair=wooden_top.add(metal_leg)
+    
+wooden_top = WorkPeice(material='wood',shape='Cylider', radius=1, height=0.1) 
+metal_leg = WorkPeice(material='steel',shape='Cylider', radius=0.1, height=2) 
+metal_cubic=WorkPeice(material='steel',shape='Cube', length=1, width=3,height=2) 
+chair=wooden_top.add(metal_leg)
 
-wooden_top_volume=wooden_top.print_material_volume_breakdown() metal_leg_volume=metal_leg.print_material_volume_breakdown()
+wooden_top_volume=wooden_top.print_material_volume_breakdown() 
+metal_leg_volume=metal_leg.print_material_volume_breakdown()
 
-wooden_top_cost=wooden_top.Total_cost() metal_leg_cost=metal_leg.Total_cost()
+wooden_top_cost=wooden_top.Total_cost() 
+metal_leg_cost=metal_leg.Total_cost()
 
-print(wooden_top_cost) print(metal_leg_cost) print(wooden_top_volume) print(metal_leg_volume) print(chair)
+print(wooden_top_cost) 
+print(metal_leg_cost) 
+print(wooden_top_volume) 
+print(metal_leg_volume) print(chair)
