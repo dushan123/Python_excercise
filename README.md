@@ -7,6 +7,8 @@ class WorkPeice(): def init(self, material, shape, radius=None, length=None, wid
     self.length  = length
     self.width = width
     self.height=height
+    self.base=base
+    self.height_P=height_P
     
 
 def __add__(self, other):
