@@ -1,5 +1,7 @@
 # Python_excercise
-class WorkPeice(): def init(self, material, shape, radius=None, length=None, width=None, height=None, base=None, height_P=None):
+class WorkPeice(): 
+
+def init(self, material, shape, radius=None, length=None, width=None, height=None, base=None, height_P=None):
 
     self.material = material
     self.shape = shape
